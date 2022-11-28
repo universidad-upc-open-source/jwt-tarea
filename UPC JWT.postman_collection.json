@@ -1,0 +1,135 @@
+{
+	"info": {
+		"_postman_id": "5b4e9ce0-121f-4d91-9899-18ec35f64919",
+		"name": "UPC JWT",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Producto Listar",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJlZGR5bHVxdWUiLCJpYXQiOjE2Njk2NzEzMjcsImV4cCI6MTY2OTY3NDkyN30.2wrcWAerEoh1oLDKGsh583XusTVINPmgd9dwcyvZUXwah1oUyNgAp1htRTOs-6F-C4ynLavD2Z_RSfD7J0xF3Q",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/producto/lista",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"producto",
+						"lista"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Producto Crear",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJlZGR5bHVxdWUiLCJpYXQiOjE2Njk2NzI0MjIsImV4cCI6MTY2OTY3NjAyMn0.TnGhY-nGBmjmhd1yS_TkzyU32vzY3am0nrvi8aa2HUdXYqkbgB1_7XPa4jptpXb7tQZxMr1cLPZGApgwpZPtrA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\" : \"Kit de destornillador Plano\",\r\n    \"stock\": \"60\",\r\n    \"sku\" : \"10613 942 11\",\r\n    \"price\" : 96.88\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/producto",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"producto"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userName\" : \"jma_9\",\r\n    \"password\" : \"123123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\" : \"jma_59@hotmail.com\",\r\n    \"password\": \"123123\",\r\n    \"userName\" : \"jma_59\",\r\n    \"roles\" : [\r\n        \"admin\"\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/auth/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"auth",
+						"register"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
